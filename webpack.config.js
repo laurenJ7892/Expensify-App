@@ -38,10 +38,10 @@ module.exports = (env) => {
     plugins:[
       cssExtract
     ],
-    devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: isProduction ? 'source-map' : 'inlin-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true
     }
-  }
+  };
 };
