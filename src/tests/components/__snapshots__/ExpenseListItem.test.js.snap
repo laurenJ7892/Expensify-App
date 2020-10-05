@@ -11,10 +11,9 @@ exports[`should render test item from expenses 1`] = `
   </[object Object]>
   <p>
      
-    500000
-     - 
-    -345600000
-     
+    $5,000.00
+    -
+    December 27th, 1969
   </p>
 </div>
 `;
