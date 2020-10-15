@@ -1,3 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render NotFound correctly 1`] = `""`;
+exports[`should render NotFound correctly 1`] = `
+<div>
+  <[object Object]
+    to="/"
+  >
+    Feeling Lost? Let's go Home
+  </[object Object]>
+</div>
+`;
