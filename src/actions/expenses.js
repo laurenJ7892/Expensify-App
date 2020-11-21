@@ -1,4 +1,5 @@
 import database from '../firebase/firebase';
+import expensesTotal from '../Selectors/expenses-total';
 
 // ADD_EXPENSE
 export const addExpense = (expense) => ({
@@ -39,3 +40,24 @@ export const editExpense = (id, updates) => ({
   updates
 }); 
 
+ // SET_EXPENSES
+ export const setExpenses = (expenses) => ({
+   type: 'SET_EXPENSES',
+   expenses
+ });
+
+//START_SET_EXPENSES
+ export const startSetExpenses = () => {
+   return (dispatch) => {
+     return database.ref('expenses').once('value').then((snapshot) => {
+       const expenseArray = [];
+       snapshot.forEach((childSnapshot) => {
+         expenseArray.push({
+           id: childSnapshot.key,
+           ...childSnapshot.val()
+        });
+      });
+     dispatch(setExpenses(expenseArray));
+   });
+  };
+ };
