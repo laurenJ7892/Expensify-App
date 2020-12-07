@@ -21,5 +21,5 @@ test('should return total for one expense', () => {
 
 test('should return total for multiple expense', () => {
     const total = selectExpensesTotal(expenses);
-    expect(total).toBe(530195);
+    expect(total).toBe(114195);
 });
