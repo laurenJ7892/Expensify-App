@@ -22,11 +22,11 @@ export class EditExpensePage extends React.Component {
   };
 
   showModal = () => {
-    this.setState({ showModal: true });
+    this.setState({ showModal: true, calendarFocused: false });
   }
 
   closeModal = () => {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false, calendarFocused: false });
   }
 
   render() {
@@ -38,6 +38,7 @@ export class EditExpensePage extends React.Component {
           closeModal={this.closeModal}
           deleteExpense={this.onClick}
           />
+          {this.state.showModal && <div className="modal_overlay"></div>}
           <div className="content-container">
             <h1 className="page-header__title">Edit Expense</h1>
             <ExpenseForm

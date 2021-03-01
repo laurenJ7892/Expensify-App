@@ -1,27 +1,65 @@
 .confirmation_modal {
-  background-color: $dark-blue;
+  background-color: #f7f7f7;
+  border-radius: 0.5em;
+  border:  0.2 $dark-gray;
   bottom: 25%;
   color: $off-white;
   display: flex;
+  flex-direction: column;
   height: 200px;
-  left: 10%;
-  position: fixed;
-  right: 10%;
+  left: 37.5%;
+  position: absolute;
+  right: 37.5%;
   top: 25%;
-  width: 80%;
-  z-index: 1000;
+  width: 50rem;
+  z-index: 500;
 }
 
 .confirmation_header {
+  align-self: center;
+  background-color: $dark-blue;
   height: 20%;
-  margin-left: 10%;
+  margin: 0;
   width: 100%;
+  h5 {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
 }
 
 .confirmation_content {
-  margin-top: 5%;
+  color: $dark-gray;
   height: 80%;
-  width: 90%;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
 }
 
 
+.confirmation_button {
+  background-color: $dark-blue;
+  border: none;
+  color: $off-white;
+  height: 3rem;
+  margin: 0.5rem;
+  padding: 0 $m-size;
+}
+
+.confirmation_submit_button {
+  background-color: $blue;
+  border: none;
+  color: $off-white;
+  height: 3rem;
+  margin: 0.5rem;
+  padding: 0 $m-size;
+}
+
+.modal_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 499;
+}
